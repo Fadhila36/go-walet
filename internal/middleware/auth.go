@@ -10,7 +10,7 @@ import (
 
 func Authenticate(userService domain.UserService) fiber.Handler {
 	return func(ctx *fiber.Ctx) error {
-		token := strings.ReplaceAll(ctx.Get("Authorization"), "Bearer", "")
+		token := strings.ReplaceAll(ctx.Get("Authorization"), "Bearer ", "")
 		if token == "" {
 			return ctx.SendStatus(401)
 		}

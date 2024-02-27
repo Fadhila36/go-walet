@@ -19,6 +19,6 @@ type UserRepository interface {
 }
 
 type UserService interface {
-	Aunthenticate(ctx context.Context, req dto.AuthReq) (dto.AuthRes, error)
+	Authenticate(ctx context.Context, req dto.AuthReq) (dto.AuthRes, error)
 	ValidateToken(ctx context.Context, token string) (dto.UserData, error)
 }

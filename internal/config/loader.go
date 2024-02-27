@@ -10,7 +10,7 @@ import (
 func Get() *Config {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatalf("error when load env %s", err.Error())
+		log.Fatalf("error when load envi %s", err.Error())
 	}
 
 	return &Config{
